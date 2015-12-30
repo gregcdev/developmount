@@ -1,0 +1,30 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+<h1>Blog</h1>
+
+<% @posts.each do |post| %>
+  <!-- <tr>
+    <td><%= post.title %></td>
+    <td><%= post.body %></td>
+    <td><%= link_to 'Show', post %></td>
+    <td><%= link_to 'Edit', edit_post_path(post) %></td>
+    <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr> -->
+  <div class="thumbnail">
+    <div class="caption">
+      <h3><%= post.title %></h3>
+      <p><%= post.body %></p>
+      <p>
+        <%= link_to 'Show', post, class: "btn btn-primary" %>
+        <%= link_to 'Edit', edit_post_path(post), class: "btn btn-default" %>
+        <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+      </p>
+    </div>
+  </div>
+<% end %>
+
+<br>
+
+<%= link_to 'New Post', new_post_path %>
+</div>
