@@ -16,3 +16,11 @@
 //= require turbolinks
 //= require_tree .
 
+function scrollListener(  ) {
+	var y = window.scrollY
+	if ( y == 0 ) {
+		$(".navbar").removeClass("raised")
+	} else {
+		$(".navbar").addClass("raised")
+	}
+}
