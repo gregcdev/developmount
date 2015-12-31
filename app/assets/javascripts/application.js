@@ -18,7 +18,7 @@
 
 function scrollListener(  ) {
 	var y = window.scrollY
-	if ( y == 0 ) {
+	if ( y == 0) {
 		$(".navbar").removeClass("raised")
 	} else {
 		$(".navbar").addClass("raised")

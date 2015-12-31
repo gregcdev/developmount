@@ -4,16 +4,9 @@
 <h1>Blog</h1>
 
 <% @posts.each do |post| %>
-  <!-- <tr>
-    <td><%= post.title %></td>
-    <td><%= post.body %></td>
-    <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr> -->
   <div class="thumbnail">
     <div class="caption">
-      <h3><%= post.title %></h3>
+      <h3><%= post.title %> <small><%= post.created_at.strftime "%a. %b %d, %Y" %></small></h3>
       <p><%= post.body %></p>
       <p>
         <%= link_to 'Show', post, class: "btn btn-primary" %>
